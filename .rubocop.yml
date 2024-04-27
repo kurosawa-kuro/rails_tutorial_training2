@@ -1,0 +1,26 @@
+require: rubocop-rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/*'
+    - 'node_modules/**/*'
+    - 'config/environments/development.rb'
+
+# Rails-specific configuration
+Rails:
+  Enabled: true
+
+# Adjust if you use a different max line length in your team
+Layout/LineLength:
+  Max: 120
+
+# Example to ignore documentation requirement for classes and modules
+Style/Documentation:
+  Enabled: false
+
+# Adjust block length for test files
+Metrics/BlockLength:
+  Exclude:
+    - 'test/**/*'
